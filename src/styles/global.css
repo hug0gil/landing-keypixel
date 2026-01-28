@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
+:root {
+    /* 🎯 COLOR PRINCIPAL */
+    --main-color: #a94c64;
+    /* Fondo principal, header, identidad */
+
+    /* 🧱 FONDOS */
+    --bg-dark: #7e3548;
+    /* Secciones alternas, footer */
+    --bg-darker: #281a21;
+    /* Fondos muy oscuros, profundidad */
+
+    /* 🟨 PIXEL / UI CLARA */
+    --ui-light: #f3d1c6;
+    /* Acentos claros, subrayados, hover */
+    --ui-light-muted: #caa59a;
+    /* Bordes suaves, sombras claras */
+
+    /* 🔥 ACENTOS CÁLIDOS */
+    --accent-main: #c96b4f;
+    /* Botones importantes, highlights */
+    --accent-dark: #8f3f2b;
+    /* Hover fuerte, sombras de botones */
+
+    /* ✍️ TEXTO */
+    --text-main: #ffffff;
+    /* Texto principal */
+    --text-muted: #f1cfd6;
+    /* Texto secundario */
+
+    /* 🧊 BORDES / SEPARADORES */
+    --border-soft: rgba(255, 255, 255, 0.12);
+    --nav-size: 25px;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Jersey 15';
+    font-size: 20px;
+}

@@ -1,0 +1,45 @@
+<a class={`${Astro.props.class}`} href={Astro.props.href}>
+  <slot />
+</a>
+
+<style>
+  a {
+     text-decoration: none;
+    padding: 0.6em 1.2em;
+    border-radius: 9999px;
+    font-size: 1.1rem;
+    transition: all 0.25s ease;
+        border: 1px solid var(--ui-light);
+    color: var(--ui-light);
+  }
+
+
+
+    a:hover {
+    background-color: var(--ui-light);
+    color: var(--bg-darker);
+}
+
+  /* --- MEDIA QUERIES --- */
+
+  /* Tablets y pantallas medianas */
+  @media (max-width: 1024px) {
+    a {
+      font-size: 20px;
+      padding: 0.3em 0.6em;
+    }
+  }
+
+  /* Móviles pequeños */
+  @media (max-width: 480px) {
+    a {
+      font-size: 18px;
+      padding: 0.25em 0.5em;
+    }
+
+    a img,
+    a svg {
+      height: 0.9em; /* iconos un poco más pequeños */
+    }
+  }
+</style>

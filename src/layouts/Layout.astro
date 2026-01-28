@@ -1,0 +1,66 @@
+---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <title>{title}</title>
+  </head>
+
+  <body class="px-4">
+    <div
+      class="fixed inset-0 -z-10"
+      style="background: radial-gradient(125% 125% at 50% 10%, #000 40%, #fca5a5 150%);"
+    >
+    </div>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    color-scheme: light dark;
+  }
+
+  html {
+    font-family: "Onest Variable", system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+  body {
+    background: #050500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+</style>
+
+<!--
+  class='fixed inset-0 -z-10'
+  
+    Hace que el fondo:
+    esté fijo al viewport (gracias a fixed);
+    ocupe toda la pantalla (gracias a inset-0);
+    quede detrás del contenido (-z-10). 
+    -->

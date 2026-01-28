@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import "../styles/home.css";
+import SocialPill from "../icons/SocialPill.astro";
+---
+
+<Layout
+  title="KeyPixel Studio"
+  description="Studio dedicated to modding in @Hytale Harvesting the dreams we planted in 2018"
+>
+  <body>
+    <main class="home">
+      <section class="main-section">
+        <h1 class="main-title">Welcome to KeyPixel Studio!</h1>
+        <p class="main-subtitle">
+          Studio dedicated to modding in Hytale.<br />
+          Harvesting the dreams we planted in 2018.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">Our Projects</a>
+          <SocialPill
+            href="https://mail.google.com/mail/?view=cm&to=keypixelstudios@gmail.com"
+          >
+            Contact with us
+          </SocialPill>
+        </div>
+      </section>
+
+      <section class="section-dark">
+        <h2>What we do?</h2>
+        <p>
+          We create immersive mods, tools and experiences with a strong focus on
+          pixel art aesthetics, gameplay and community.
+        </p>
+      </section>
+    </main>
+  </body>
+</Layout>

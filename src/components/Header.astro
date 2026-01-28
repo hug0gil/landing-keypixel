@@ -1,0 +1,144 @@
+---
+import SocialPill from "../icons/SocialPill.astro";
+---
+
+<header class="header">
+  <div class="logo-container">
+    <img src="favicon.svg" class="logo" />
+    <img src="keypixel-letters.png" class="letters" />
+  </div>
+
+  <div class="nav-container">
+    <nav class="nav">
+      <a href="#top" class="nav-link">Home</a>
+      <a href="#experiencia" class="nav-link">Team</a>
+      <a href="#proyectos" class="nav-link">Projects</a>
+      <SocialPill
+        href="https://mail.google.com/mail/?view=cm&to=keypixelstudios@gmail.com"
+      >
+        Contact with us
+      </SocialPill>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-area: "logo nav";
+    align-items: center;
+    padding: 7.5px 0;
+    width: 100%;
+    background-color: var(--main-color);
+  }
+
+  .logo-container {
+    grid: "logo";
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .logo {
+    width: 85px;
+  }
+
+  .letters {
+    height: auto;
+    max-height: 60px; /* ajusta a tu gusto */
+    width: auto;
+  }
+
+  .nav-container {
+    grid: "nav";
+    justify-items: right;
+    margin-right: 50px;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (min-width: 1280px) {
+    .nav {
+      gap: 2.5rem; /* xl:gap-x-10 */
+    }
+  }
+
+  .nav-link {
+    position: relative;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    transition:
+      color 300ms ease,
+      text-decoration 300ms ease;
+    font-size: var(--nav-size);
+  }
+
+  .nav-link::after {
+    content: ""; /* el pseudo-elemento vacío */
+    position: absolute;
+    left: 0;
+    bottom: 0; /* alinea al fondo del texto */
+    height: 2px; /* grosor de la barra */
+    width: 0%; /* empieza invisible */
+    background-color: white; /* color de la barra */
+    transition: width 300ms ease; /* animación al cambiar el ancho */
+  }
+
+  .nav-link:hover {
+    color: white; /* cambia el color del texto */
+  }
+
+  .nav-link:hover::after {
+    width: 100%; /* se expande completamente al pasar el cursor */
+  }
+
+  @media (max-width: 1024px) {
+    .header {
+      grid-template-columns: 1fr; /* una columna */
+      padding: 10px;
+      text-align: center;
+    }
+
+    .logo-container {
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 1024px) {
+  .nav-container {
+    display: flex;          /* activa flexbox */
+    justify-content: center; /* centra horizontalmente */
+    margin-right: 0;        /* elimina el margen derecho */
+  }
+
+  .nav {
+    flex-direction: column; /* apila links verticalmente */
+    gap: 10px;
+  }
+
+  .nav-link {
+    font-size: 20px; /* más pequeño en móviles */
+  }
+  }
+
+  @media (max-width: 480px) {
+    .logo {
+      width: 65px;
+    }
+
+    .letters {
+      max-height: 40px;
+    }
+
+    .nav-link {
+      font-size: 18px;
+    }
+  }
+</style>

@@ -1,0 +1,122 @@
+---
+import SocialPill from "../icons/SocialPill.astro";
+---
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <span class="footer-text">
+        © <span id="year"> </span> Developed by
+        <a id="link" href="https://github.com/hug0gil">hug0gil</a>. All rights
+        reserved to the studio.
+      </span>
+    </div>
+
+    <script>
+      const yearElement = document.getElementById("year");
+      if (yearElement) {
+        yearElement.style = "font-size: var(--nav-size);";
+        yearElement.textContent = new Date().getFullYear().toString();
+      }
+    </script>
+
+    <nav class="footer-nav">
+      <a href="#top" class="footer-link">Home</a>
+      <SocialPill href="https://x.com/KeyPixelStudio"> X </SocialPill>
+    </nav>
+  </div>
+</footer>
+<style>
+  .footer {
+    width: 100%;
+    background-color: var(--main-color);
+    padding: 15px 0;
+    margin-top: 50px;
+  }
+
+  .footer-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .footer-text {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: var(--nav-size);
+  }
+
+  .footer-text a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .footer-text a:hover {
+    text-decoration: underline;
+  }
+
+  #link {
+    font-size: var(--nav-size);
+  }
+
+  .footer-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .footer-link {
+    position: relative;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: var(--nav-size);
+    transition: color 300ms ease;
+  }
+
+  .footer-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 300ms ease;
+  }
+
+  .footer-link:hover {
+    color: white;
+  }
+
+  .footer-link:hover::after {
+    width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    .footer-container {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      text-align: center;
+    }
+
+    .footer-nav {
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-text {
+      font-size: 13px;
+    }
+
+    .footer-link {
+      font-size: 16px;
+    }
+  }
+</style>
