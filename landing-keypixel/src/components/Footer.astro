@@ -1,0 +1,151 @@
+---
+import textLogo from "../assets/text-logo.png";
+---
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-info">
+      <img src={textLogo.src} class="footer-logo-img" alt="Key Pixel" />
+      <p class="footer-desc">Harvesting dreams since 2018.</p>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-group">
+        <h4>Studio</h4>
+        <a href="#about">About Us</a>
+        <a href="#projects">Projects</a>
+      </div>
+      <div class="footer-group">
+        <h4>Work</h4>
+        <a
+          href="https://mail.google.com/mail/?view=cm&to=keypixelstudios@gmail.com"
+          >Contact</a
+        >
+        <a href="https://x.com/KeyPixelStudio">X / Twitter</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>
+      &copy; {new Date().getFullYear()} KeyPixel Studio. Developed by <a
+        href="https://github.com/hug0gil">hug0gil</a
+      > and forked by <a href="https://github.com/kxn3dev">Kane Morez</a>.
+    </p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--bg-darker);
+    padding: 100px 0 40px;
+    border-top: 1px solid var(--border-soft);
+    margin-top: 120px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--brand-primary),
+      transparent
+    );
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    margin-bottom: 80px;
+    flex-wrap: wrap;
+  }
+
+  .footer-logo-img {
+    height: 160px;
+    width: auto;
+    filter: drop-shadow(0 2px 10px rgba(var(--brand-primary-rgb), 0.2));
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    margin-left: -30px;
+    margin-top: 5px;
+    margin-bottom: -60px;
+  }
+
+  .footer-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    max-width: 300px;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 6rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-group h4 {
+    color: white;
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.5;
+  }
+
+  .footer-group a {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .footer-group a:hover {
+    color: var(--brand-primary);
+    transform: translateX(5px);
+  }
+
+  .footer-bottom {
+    padding-top: 40px;
+    border-top: 1px solid var(--border-soft);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+
+  .footer-bottom a {
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-bottom a:hover {
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .footer-links {
+      gap: 3rem;
+    }
+
+    .footer-group {
+      min-width: 140px;
+    }
+  }
+</style>

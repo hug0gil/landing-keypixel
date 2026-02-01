@@ -1,0 +1,229 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import "../styles/home.css";
+import SocialPill from "../icons/SocialPill.astro";
+import projectAether from "../assets/handfixes.png";
+import pixelQuest from "../assets/crystaltree.png";
+---
+
+<Layout
+  title="KeyPixel Studio | Architecting Hytale's Future"
+  description="A premium collective of creators dedicated to Hytale modding, harvesting dreams since 2018."
+>
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-bg"></div>
+      <div class="hero-video-container">
+        <iframe
+          class="hero-video"
+          src="https://www.youtube.com/embed/grpsacnKddI?autoplay=1&mute=1&loop=1&playlist=grpsacnKddI&controls=0&modestbranding=1&rel=0&showinfo=0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+
+      <div class="floating-element" style="top: 20%; left: 10%;"></div>
+      <div
+        class="floating-element"
+        style="top: 60%; right: 15%; animation-delay: -5s;"
+      >
+      </div>
+
+      <div class="hero-content reveal">
+        <h1 class="main-title">Crafting Dreams in Every Block</h1>
+        <p class="main-subtitle">
+          KeyPixel Studio is a collective of storytellers and architects
+          building the next evolution of Hytale since 2018.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Our Portfolio</a>
+          <a href="#about" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="stats-grid reveal">
+        <div class="stat-item">
+          <span class="stat-number">2018</span>
+          <span class="stat-label">Building Since</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">10k+</span>
+          <span class="stat-label">Community Members</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">5+</span>
+          <span class="stat-label">Major Projects</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section container" id="about">
+      <h2 class="section-title reveal">Elevating the Block</h2>
+      <div class="grid-3">
+        <div class="card reveal delay-1">
+          <div class="card-icon">🛠️</div>
+          <h3>Expert Modding</h3>
+          <p>
+            We engineer immersive systems, custom tools, and refined gameplay
+            loops that push the vertical limits of the Hytale engine.
+          </p>
+        </div>
+        <div class="card reveal delay-2">
+          <div class="card-icon">🎨</div>
+          <h3>Visual Excellence</h3>
+          <p>
+            Pixel art mastery fused with modern voxel modeling. We maintain the
+            soul of the genre while delivering high-fidelity visuals.
+          </p>
+        </div>
+        <div class="card reveal delay-3">
+          <div class="card-icon">👥</div>
+          <h3>Legacy & Community</h3>
+          <p>
+            Deeply rooted in the community since 2018. We don't just build mods;
+            we build legacies for the players who share our passion.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container reveal">
+      <div class="philosophy-box">
+        <div class="philosophy-content">
+          <span class="project-tag">Our Vision</span>
+          <h2>Harvesting Dreams</h2>
+          <p>
+            We believe that every block tells a story. Since our inception in
+            2018, our journey has been about more than technical skill—it's
+            about the passion we plant in every project, waiting for the
+            community to see it bloom.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="projects">
+      <h2 class="section-title reveal">Selected Works</h2>
+      <div class="project-grid">
+        <div class="project-item reveal delay-1">
+          <img
+            src={projectAether.src}
+            alt="Project Aether Thumbnail"
+            class="project-img"
+          />
+          <div class="project-overlay">
+            <span class="project-tag">Hotfixes</span>
+            <h4>Key's Hold Fixes</h4>
+            <p>
+              Mod that fixes some visual bugs in Hytale. Let's make this game a
+              better place!
+            </p>
+          </div>
+        </div>
+        <div class="project-item reveal delay-2">
+          <img
+            src={pixelQuest.src}
+            alt="PixelQuest Thumbnail"
+            class="project-img"
+          />
+          <div class="project-overlay">
+            <span class="project-tag">Hotfixes & Building</span>
+            <h4>Functional Crystal Tree</h4>
+            <p>
+              Mod that adds functionality to both the crystal tree and the
+              crystals at the base of the tree.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container reveal">
+      <div class="discord-banner">
+        <div class="discord-content">
+          <h3>Join the Community</h3>
+          <p>
+            Stay updated with our latest developments and connect with other
+            Hytale enthusiasts in our official Discord server.
+          </p>
+          <a
+            href="https://discord.gg/hUecRdeHgp"
+            class="btn btn-primary"
+            style="background: #5865F2; box-shadow: 0 10px 20px rgba(88, 101, 242, 0.3);"
+          >
+            Join Discord
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="contact" style="text-align: center;">
+      <h2 class="section-title reveal">Ready to Collaborate?</h2>
+      <p
+        class="reveal delay-1"
+        style="margin-bottom: 3.5rem; color: var(--text-muted); font-size: 1.1rem;"
+      >
+        Whether it's a partnership or a simple greeting, we're always open to
+        new connections.
+      </p>
+      <div
+        class="reveal delay-2"
+        style="display: flex; justify-content: center; gap: 1.5rem;"
+      >
+        <a
+          href="https://mail.google.com/mail/?view=cm&to=keypixelstudios@gmail.com"
+          class="btn btn-primary"
+        >
+          Send an Email
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach((card) => {
+    card.addEventListener("mousemove", (e: any) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      (card as HTMLElement).style.setProperty("--mouse-x", `${x}px`);
+      (card as HTMLElement).style.setProperty("--mouse-y", `${y}px`);
+      (card as HTMLElement).style.opacity = "1";
+    });
+
+    card.addEventListener("mouseleave", () => {
+      (card as HTMLElement).style.opacity = "1";
+    });
+  });
+
+  const revealCallback = (entries: IntersectionObserverEntry[]) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  };
+
+  const revealObserver = new IntersectionObserver(revealCallback, {
+    threshold: 0.1,
+  });
+
+  document.querySelectorAll(".reveal").forEach((el) => {
+    revealObserver.observe(el);
+  });
+</script>
+
+<style>
+  .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+</style>
